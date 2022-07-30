@@ -82,42 +82,42 @@ function isWhatCarrier() {
   if (mtn == true) {
     message.textContent = "This is a MTN number";
     // body.style.background = "yellow";
-    phoneNoLogo.innerHTML = `<img src="/mtn.png" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/mtn.png" alt="carrier-logo" class="logo" />`;
     console.log("This is a MTN number");
   } else if (airtel == true) {
     message.textContent = "This is an airtel number";
     // body.style.background = "red";
-    phoneNoLogo.innerHTML = `<img src="/airtel.png" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/airtel.png" alt="carrier-logo" class="logo" />`;
     console.log("This is an airtel number");
   } else if (etisalat == true) {
     message.textContent = "This is an etisalat number";
     // body.style.background = "rgb(4, 33, 4)";
-    phoneNoLogo.innerHTML = `<img src="/mobile9.png" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/mobile9.png" alt="carrier-logo" class="logo" />`;
     console.log("This is an etisalat number");
   } else if (glo == true) {
     message.textContent = "This is a glo number";
     // body.style.background = "rgb(186, 254, 59)";
-    phoneNoLogo.innerHTML = `<img src="/glo.jpg" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/glo.jpg" alt="carrier-logo" class="logo" />`;
     console.log("This is a glo number");
   } else if (ntel == true) {
     message.textContent = "This is an ntel number";
     // body.style.background = "rgb(0, 105, 0)";
-    phoneNoLogo.innerHTML = `<img src="/ntel.png" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/ntel.png" alt="carrier-logo" class="logo" />`;
     console.log("This is an ntel number");
   } else if (smile == true) {
     message.textContent = "This is a smile number";
     // body.style.background = "rgb(137, 211, 137)";
-    phoneNoLogo.innerHTML = `<img src="/smile-.jpg" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/smile-.jpg" alt="carrier-logo" class="logo" />`;
     console.log("This is a smile number");
   } else if (multilinks == true) {
     message.textContent = "This is a multilinks number";
     // body.style.background = "rgb(1, 35, 1)";
-    phoneNoLogo.innerHTML = `<img src="/multilinks.webp" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/multilinks.webp" alt="carrier-logo" class="logo" />`;
     console.log("This is a multilinks number");
   } else if (visafone == true) {
     message.textContent = "This is a visafone number";
     // body.style.background = "rgb(166, 30, 30)";
-    phoneNoLogo.innerHTML = `<img src="/visafone.png" alt="carrier-logo" class="logo" />`;
+    phoneNoLogo.innerHTML = `<img src="/images/visafone.png" alt="carrier-logo" class="logo" />`;
     console.log("This is a visafone number");
   } else {
     message.textContent = "Don't know what carrier is this number";
@@ -201,6 +201,6 @@ submitBtn.addEventListener("click", () => phoneNoInitializer());
 //   phoneNoLogo.innerHTML = `<img src="/white.jpg" alt="carrier-logo" class="logo" />`;
 // }
 phoneNo.addEventListener("keypress", () => {
-  phoneNoLogo.innerHTML = `<img src="/white.jpg" alt="carrier-logo" class="logo" />`;
+  phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
 });
 // addEventListener("focusin");
