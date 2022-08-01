@@ -3,9 +3,8 @@
   padding: 0;
   margin: 0;
 }
-
-body {
-  background-image: url(/image2.jpg);
+.validator-ctn {
+  background-image: url(/images/image2.jpg);
   background-position: center;
   background-position: top;
   background-repeat: no-repeat;
@@ -18,7 +17,7 @@ body {
   height: 100vh;
 }
 
-.container {
+.container-val {
   /* border: 2px solid yellow; */
   min-height: 12.5rem;
   padding: 10px 25px 20px 25px;

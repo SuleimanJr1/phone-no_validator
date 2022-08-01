@@ -121,7 +121,10 @@ function isWhatCarrier() {
     console.log("This is a visafone number");
   } else {
     message.textContent = "Don't know what carrier is this number";
+    // message.style.color = "red";
     console.log("Don't know what carrier is this number");
+    phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
+
     // body.style.background = "black";
   }
 }
@@ -136,6 +139,8 @@ function noStartsWith0() {
   } else {
     message.textContent = "Invalid number";
     console.log("Invalid number");
+    phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
+
     return;
   }
 }
@@ -150,6 +155,8 @@ function noStartsWith234() {
   } else {
     message.textContent = "Invalid number";
     console.log("Invalid number");
+    phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
+
     return;
   }
 }
@@ -164,6 +171,8 @@ function phoneNoInitializer() {
   if (number == "") {
     message.textContent = "Please enter a number first!";
     console.log("Please enter a number first");
+    phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
+
     return null;
   } else if (shortHandInitializer == true) {
     console.log(shortHandInitializer);
@@ -177,7 +186,8 @@ function phoneNoInitializer() {
   } else {
     // console.log(digit);
     message.textContent = "Not a Nigeria country code/short Hand Initializer";
-
+    phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
+    s;
     console.log("Not a NIgeria country code/short Hand Initializer");
     return;
   }
