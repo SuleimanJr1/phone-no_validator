@@ -1,40 +1,3 @@
-// // const phoneNo = document.querySelector(".number");
-// // const submitBtn = document.querySelector(".submit-btn");
-// const mtnWord = "+225 Everywhere you go";
-
-// //  A regex starting that a string must start with a "+234"
-// const mtnRegex = /^\+234/;
-
-// // A regex starting that a string must start with a "+" and must be either "234"
-// // or "223" or "224" or "225", | starts for "or"
-
-// const mtnReGex = /^\+(?=234|223|224|225)/;
-
-// const mtn = mtnWord.match(mtnReGex);
-// console.log(mtn);
-// // console.log(phoneNo.startsWith("0"));
-// // submitBtn.addEventListener("click", () => {
-// //   let digit = phoneNo.value;
-// //   console.log(digit);
-// // });
-
-// // console.log(phoneNo);
-
-// let oranges = ["ripe orange A ", "orange ripe B", "ripe orange C"];
-
-// let ripe_oranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
-// console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
-
-// const aliceExcerpt =
-//   "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
-// const regexpWordStartingWithA = /\b[aA]\w+/g;
-// // \b indicates a boundary (i.e. do not start matching in the middle of a word)
-// // [aA] indicates the letter a or A
-// // \w+ indicates any character *from the latin alphabet*, multiple times
-
-// console.table(aliceExcerpt.match(regexpWordStartingWithA));
-// // ['Ada', 'and', 'at', 'all']
-
 const phoneNo = document.querySelector(".number");
 const submitBtn = document.querySelector(".check-btn");
 const message = document.querySelector(".message");
@@ -52,23 +15,6 @@ const ntelNumbersRegex = /^(\+234|0)(?=804)\d{10}/;
 const smileNumbersRegex = /^(\+234|0)(?=702)\d{10}/;
 const multilinksNumbersRegex = /^(\+234|0)(?=709)\d{10}/;
 
-// let mtnNumbers = [
-//   "+2348061334218",
-//   "08025480555",
-//   "+2347061334218",
-//   "+2348065480555",
-// ];
-// for (let i = 0; i < mtnNumbers.length; i++) {
-//   let mtnMatchNumbers = mtnNumbers[i].match(mtnNumbersRegex);
-
-//   console.log(mtnMatchNumbers);
-// }
-
-// function onlyNumberKeys(evt) {
-//   var ASCIICode = evt.which ? evt.which : evt.keyCode;
-//   if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
-//   return true;
-// }
 function isWhatCarrier() {
   let number = phoneNo.value;
   let mtn = mtnNumbersRegex.test(number);
@@ -81,51 +27,41 @@ function isWhatCarrier() {
   let visafone = visafoneNumbersRegex.test(number);
   if (mtn == true) {
     message.textContent = "This is a MTN number";
-    // body.style.background = "yellow";
     phoneNoLogo.innerHTML = `<img src="/images/mtn.png" alt="carrier-logo" class="logo" />`;
     console.log("This is a MTN number");
   } else if (airtel == true) {
     message.textContent = "This is an airtel number";
-    // body.style.background = "red";
     phoneNoLogo.innerHTML = `<img src="/images/airtel.png" alt="carrier-logo" class="logo" />`;
     console.log("This is an airtel number");
   } else if (etisalat == true) {
     message.textContent = "This is an etisalat number";
-    // body.style.background = "rgb(4, 33, 4)";
     phoneNoLogo.innerHTML = `<img src="/images/mobile9.png" alt="carrier-logo" class="logo" />`;
     console.log("This is an etisalat number");
   } else if (glo == true) {
     message.textContent = "This is a glo number";
-    // body.style.background = "rgb(186, 254, 59)";
     phoneNoLogo.innerHTML = `<img src="/images/glo.jpg" alt="carrier-logo" class="logo" />`;
     console.log("This is a glo number");
   } else if (ntel == true) {
     message.textContent = "This is an ntel number";
-    // body.style.background = "rgb(0, 105, 0)";
     phoneNoLogo.innerHTML = `<img src="/images/ntel.png" alt="carrier-logo" class="logo" />`;
     console.log("This is an ntel number");
   } else if (smile == true) {
     message.textContent = "This is a smile number";
-    // body.style.background = "rgb(137, 211, 137)";
     phoneNoLogo.innerHTML = `<img src="/images/smile-.jpg" alt="carrier-logo" class="logo" />`;
     console.log("This is a smile number");
   } else if (multilinks == true) {
     message.textContent = "This is a multilinks number";
-    // body.style.background = "rgb(1, 35, 1)";
     phoneNoLogo.innerHTML = `<img src="/images/multilinks.webp" alt="carrier-logo" class="logo" />`;
     console.log("This is a multilinks number");
   } else if (visafone == true) {
     message.textContent = "This is a visafone number";
-    // body.style.background = "rgb(166, 30, 30)";
     phoneNoLogo.innerHTML = `<img src="/images/visafone.png" alt="carrier-logo" class="logo" />`;
     console.log("This is a visafone number");
   } else {
     message.textContent = "Don't know what carrier is this number";
-    // message.style.color = "red";
     console.log("Don't know what carrier is this number");
     phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
 
-    // body.style.background = "black";
   }
 }
 
@@ -156,7 +92,6 @@ function noStartsWith234() {
     message.textContent = "Invalid number";
     console.log("Invalid number");
     phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
-
     return;
   }
 }
@@ -166,8 +101,6 @@ function phoneNoInitializer() {
   let digit = initalsRegex.test(number);
   let shortHandInitializer = number.startsWith("0");
 
-  // console.log(digit);
-  // console.log(number);
   if (number == "") {
     message.textContent = "Please enter a number first!";
     console.log("Please enter a number first");
@@ -184,33 +117,18 @@ function phoneNoInitializer() {
     console.log("This is a valid country code");
     noStartsWith234();
   } else {
-    // console.log(digit);
     message.textContent = "Not a Nigeria country code/short Hand Initializer";
     phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
     s;
     console.log("Not a NIgeria country code/short Hand Initializer");
     return;
   }
-  // let startWith0 = number.prototype.startsWith("0");
   let phoneNoLenght = number.length;
   console.log(phoneNoLenght);
 }
 
 submitBtn.addEventListener("click", () => phoneNoInitializer());
 
-// submitBtn.addEventListener("click", ());
-// let phoneNoLenght = number.length;
-// console.log(phoneNoLenght);
-// if ()
-
-// phoneNo.addEventListener("keypress", () => {
-//   phoneNoLogo.style.display = "none";
-// });
-
-// while ((number.value = "")) {
-//   phoneNoLogo.innerHTML = `<img src="/white.jpg" alt="carrier-logo" class="logo" />`;
-// }
 phoneNo.addEventListener("keypress", () => {
   phoneNoLogo.innerHTML = `<img src="/images/white.jpg" alt="carrier-logo" class="logo" />`;
 });
-// addEventListener("focusin");
