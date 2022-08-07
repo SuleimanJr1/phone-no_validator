@@ -35,7 +35,7 @@ body {
 }
 .nav-bar {
   background-color: rgb(1, 1, 24);
-  height: 15vh;
+  height: 14vh;
   display: flex;
 }
 
@@ -254,17 +254,70 @@ nav {
     font-size: 10px;
   }
 }
-/* 
-@media (max-width: 1217px) {
+
+@media (max-width: 770px) {
   #about {
     height: 30vh;
     width: 100%;
   }
 
   #about h1 {
-    font-size: 25px;
+    font-size: 15px;
   }
-} */
+
+  .team-member {
+    width: 25%;
+  }
+
+  .member-info h3 {
+    font-size: 15px
+  }
+
+  .validation p {
+      font-size: 15px;
+  }
+  
+  .validation button {
+    width: 80px;
+    height: 40px;
+  }
+  
+  .validation button a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+   #about {
+      height: 25vh;
+      width: 100%;
+    }
+  
+  #about h1 {
+      font-size: 10px;
+    }
+  
+    .team-member {
+      width: 18%;
+    }
+  
+    .member-info h3 {
+      font-size: 10px
+    }
+  
+    .validation p {
+        font-siz: 10px;
+    }
+    
+    .validation button {
+      width: 70px;
+      height: 40px;
+    }
+    
+    .validation button a {
+      font-size: 10px;
+    }
+}
 
 @media (min-width: 310px) and (max-width: 650px) {
   .container {
