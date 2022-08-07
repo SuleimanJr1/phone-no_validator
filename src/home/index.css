@@ -1,267 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --custom-color: rgb(1, 1, 24);
+  --padding: 20px;
+  --medium-font-size: 1.2em;
+  --big-font-size: 2em;
+  --input-padding: 11px 25px;
+  --border-raduis: 8px;
+  --margin-bottom: 14px;
+  --border: 1px solid #e7dfc5;
+  --marging-top: 14px;
+  --mist-color: rgb(248, 163, 4);
+  --button-hover: rgb(4, 69, 122);
+  --color: #e7dfc5;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
   margin: auto;
+  background: #f4f5f6;
+  width: 100%;
 }
 
 .container {
-  max-width: 85%;
-  /* border: red 1px solid */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-  border-radius: 10px;
+  width: 100%;
   margin: auto;
 }
-.navbar {
-  background-color: rgb(6, 6, 48);
-  color: aliceblue;
-  /* border: solid 1px yellow; */
-  min-height: 50px;
-  margin-bottom: 10px;
-}
-
-.navbar .nav-ctn {
-  padding: 15px 20px 0 20px;
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  /* border: solid 1px red; */
-  /* align-items: center; */
-  align-content: center;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-}
-
-.navbar ul a {
-  color: aliceblue;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.navbar ul a:hover {
-  color: rgb(190, 217, 228);
-  border-bottom: solid 2px rgb(190, 217, 228);
-}
-.navbar ul a .active {
-  border-bottom: solid 2px rgb(190, 217, 228);
-}
-.navbar .nickname {
-  font-weight: bolder;
-  font-size: large;
-}
-/* .nav {
-  padding: 0 10px 0 10px;
+.nav-bar {
+  background-color: rgb(1, 1, 24);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 3rem;
-  background-color: rgb(7, 3, 33);
-  color: white;
-  margin-bottom: 10px;
+  padding: 2em 8em;
 }
-ul {
+
+.logo {
+  text-decoration: none;
+  color: rgb(248, 163, 4);
+  font-size: 1.8em;
+  letter-spacing: 10px;
+}
+
+.nav-links {
   display: flex;
-  justify-content: space-between;
-  text-decoration: none;
+  list-style: none;
 }
-.nav-links li a {
-  color: white;
+.nav-links li {
+  padding: 1em 1em;
+}
+
+.nav-links a {
   text-decoration: none;
-} */
-img {
-  width: 60px;
-  height: 60px;
+  color: white;
+  font-size: 1em;
+  font-family: sans-serif;
+  transition: ease-in 0.5s;
+}
+
+#val {
+  color: rgb(248, 163, 4);
+}
+
+.nav-links a:hover {
+  background-color: whitesmoke;
+  color: rgb(248, 163, 4);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.8em;
+}
+
+#val:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#about {
+  width: 100%;
+  padding: 30px 150px;
+  background: var(--border);
+  text-align: center;
+}
+
+#about h1 {
+  font-family: "Montserrat" sans-serif;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+#about p {
+  margin-top: 30px;
+  font-size: 1.7em;
+}
+.team-section {
+  background: var(--color);
+  padding: 20px 0;
+}
+
+#team {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.team-member {
+  background: var(--custom-color);
+  margin: 20px 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.team-member img {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  margin: 0px 5px 5px 0px;
-  /* border: solid 2px plum; */
-  /* margin-right: 5px; */
+  margin: 5px 5px 5px 0px;
 }
 
-.ptag {
-  display: flex;
+.member-info h3 {
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  color: var(--mist-color);
+  margin-top: 10px;
 }
 
-h4 {
-  opacity: 0.7;
-  font-size: 15px;
+.member-info h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+  color: var(--color);
+  margin-top: 10px;
 }
 
-h5 {
-  font-weight: bolder;
-  font-size: 18px;
-  margin-bottom: 8px;
-  line-height: 1.5;
-  /* border: 1px solid forestgreen; */
+.member-info p {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: var(--color);
+  margin-top: 10px;
+  letter-spacing: 1px;
 }
 
-h3 {
-  font-weight: bolder;
-  font-size: 18px;
+.validation {
+  width: 100%;
+  background: white;
+  padding: 30px;
+  text-align: center;
 }
 
-p {
-  font-size: medium;
-  opacity: 0.7;
-  line-height: 1.3;
+.validation p {
+  font-family: "Montserrat" sans-serif;
+  font-size: 1.7em;
+  color: black;
 }
 
-.profile {
-  border: 1px solid rgb(5, 2, 33);
-  border-radius: 20px;
-  padding: 15px;
+.validation button {
+  background: var(--custom-color);
+  margin-top: 20px;
+  padding: 2em;
+  border: none;
+  border-radius: 10px;
+  transition: ease 0.5s;
 }
 
-.profile:nth-of-type(1) {
-  background-color: rgb(242, 255, 0);
-  color: rgb(11, 8, 60);
-  background-image: url(/Images/IMG_1743.JPG);
-  background-position-x: 80%;
-  background-repeat: no-repeat;
-  background-size: 20px;
-  grid-column: 1/3;
-}
-.profile:nth-of-type(2) {
-  background-color: rgb(65, 63, 63);
-  color: white;
-}
-.profile:nth-of-type(3) {
-  background-color: rgb(255, 0, 0);
-  color: white;
-}
-.profile:nth-of-type(7) {
-  background-color: rgb(46, 150, 69);
-  color: white;
-}
-.profile:nth-of-type(9) {
-  background-color: rgb(74, 5, 5);
-  color: white;
+.validation button a {
+  font-family: sans-serif;
+  font-size: 1.8em;
+  text-decoration: none;
+  color: var(--color);
 }
 
-.profile:nth-of-type(5) {
-  grid-row: 1/3;
-  grid-column: 4;
+.validation button:hover {
+  background: var(--mist-color);
+  color: black;
+  border: none;
 }
 
-.profile:nth-of-type(4) {
-  background-color: rgb(15, 14, 14);
-  color: white;
-  grid-column: 2/4;
-  grid-row: 2;
+.validation button a:hover {
+  color: black;
 }
 
-/* @media (min-width: 280px) and (max-width: 650px) {
-    .container {
-      grid-template-columns: 1fr 1fr;
-      width: 90%;
-    }
-    .profile:nth-of-type(1) {
-      background-color: rgb(45, 15, 73);
-      color: white;
-      background-image: url(/Images/IMG_1743.JPG);
-      background-position-x: 80%;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      grid-column: 1/3;
-    }
-    .profile:nth-of-type(2) {
-      grid-row: 2/3;
-      grid-column: 2;
-      background-color: rgb(233, 112, 112);
-    }
-    .profile:nth-of-type(3) {
-      grid-row: 3/4;
-      grid-column: 2;
-    }
-    .profile:nth-of-type(4) {
-      grid-row: 2/4;
-      grid-column: 1;
-      background-color: rgb(48, 36, 36);
-    }
-    .profile:nth-of-type(5) {
-      grid-row: 5;
-      grid-column: 1/3;
-      background-color: rgb(122, 179, 150);
-    }
-  } */
-@media (min-width: 310px) and (max-width: 650px) {
-  .container {
+@media (min-width: 531px) and (max-width: 800px) {
+  #about {
+    padding: 30px 100px;
+  }
+  #team {
+    width: 95%;
     grid-template-columns: 1fr 1fr;
-    width: 95%;
   }
-  body {
-    margin: auto;
+  .nav-bar {
+    padding: 2em 2em;
   }
-  .profile:nth-of-type(1) {
-    background-color: rgb(45, 15, 73);
-    color: white;
-    background-image: url(/Images/IMG_1743.JPG);
-    background-position-x: 80%;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    grid-column: 1/3;
+  .logo {
+    letter-spacing: 7px;
+    font-size: 1.5em;
   }
-  .profile:nth-of-type(2) {
-    grid-row: 2/3;
-    grid-column: 2;
-    background-color: rgb(233, 112, 112);
+  #about h1 {
+    font-size: 2.5em;
   }
-  .profile:nth-of-type(3) {
-    grid-row: 3/4;
-    grid-column: 2;
+  #about p {
+    font-size: 1.2em;
   }
-  .profile:nth-of-type(4) {
-    grid-row: 2/4;
-    grid-column: 1;
-    background-color: rgb(48, 36, 36);
+  .member-info h3 {
+    font-size: 1.2em;
+    font-weight: 100;
   }
-  .profile:nth-of-type(5) {
-    grid-row: 5;
-    grid-column: 1/3;
-    background-color: rgb(122, 179, 150);
+  .member-info h4 {
+    font-size: 1em;
+  }
+  .member-info p {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  .validation p {
+    font-size: 1.2em;
+  }
+  .validation button {
+    padding: 1.5em;
+  }
+  .validation button a {
+    font-size: 1.5em;
   }
 }
-@media (max-width: 309px) {
-  .container {
+@media (min-width: 321px) and (max-width: 530px) {
+  #about {
+    padding: 30px 30px;
+  }
+
+  #team {
+    width: 80%;
     grid-template-columns: 1fr;
-    width: 95%;
   }
-  body {
-    margin: auto;
+  .nav-bar {
+    padding: 2em 1em;
+    flex-direction: column;
   }
-  .profile:nth-of-type(1) {
-    background-color: rgb(37, 4, 68);
-    color: white;
-    background-image: url(/Images/IMG_1743.JPG);
-    background-position-x: 80%;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    grid-column: 1/2;
+  .logo {
+    margin-bottom: 3em;
+    letter-spacing: 5px;
+    font-size: 1.2em;
   }
-  .profile:nth-of-type(2) {
-    grid-row: 2;
-    grid-column: 1;
-    background-color: rgb(173, 65, 65);
+  #about h1 {
+    font-size: 2em;
   }
-  .profile:nth-of-type(3) {
-    grid-row: 3;
-    grid-column: 1;
-    background-color: whitesmoke;
+  #about p {
+    font-size: 1em;
   }
-  .profile:nth-of-type(4) {
-    grid-row: 4;
-    grid-column: 1;
-    background-color: rgb(37, 27, 27);
+  .member-info h3 {
+    font-size: 1.2em;
+    font-weight: 100;
   }
-  .profile:nth-of-type(5) {
-    grid-row: 5;
-    grid-column: 1;
-    background-color: rgb(68, 97, 82);
+  .member-info h4 {
+    font-size: 1em;
+  }
+  .member-info p {
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  .validation p {
+    font-size: 1em;
+  }
+  .validation button {
+    padding: 1.2em;
+  }
+  .validation button a {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 320px) {
+  #about {
+    padding: 30px 30px;
+  }
+
+  #team {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .nav-bar {
+    padding: 2em 1em;
+    flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 3em;
+    letter-spacing: 2px;
+    font-size: 1em;
+  }
+  #about h1 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links a {
+    font-size: 0.8em;
+  }
+  #about p {
+    font-size: 0.7em;
+  }
+  .team-member img {
+    width: 70px;
+    height: 70px;
+    margin: 5px 0;
+  }
+
+  .member-info h3 {
+    font-size: 1em;
+    font-weight: 100;
+  }
+
+  .member-info h4 {
+    font-size: 0.7em;
+  }
+
+  .member-info p {
+    font-size: 0.5em;
+    letter-spacing: 1px;
+  }
+  .validation p {
+    font-size: 0.7em;
+  }
+  .validation button a {
+    font-size: 1em;
+  }
+  .validation button {
+    padding: 1em;
   }
 }

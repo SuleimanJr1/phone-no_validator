@@ -11,14 +11,12 @@
   background-size: cover;
   width: 100%;
   height: 100vh;
-  /* background-color: rgb(3, 2, 20); */
   display: grid;
   place-items: center;
   height: 100vh;
 }
 
 .container-val {
-  /* border: 2px solid yellow; */
   min-height: 12.5rem;
   padding: 10px 25px 20px 25px;
   width: 25rem;
@@ -28,7 +26,6 @@
 }
 
 form {
-  /* border: 2px solid red; */
   height: 100%;
 }
 
@@ -78,7 +75,6 @@ form {
 }
 
 .message {
-  /* border: 1px solid red; */
   text-align: center;
   padding: 5px 0;
 }
