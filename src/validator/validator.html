@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone-no_validation</title>
+    <link rel="stylesheet" href="validator.css" />
+    <link rel="shortcut icon" href="/images/favicon.jpeg" type="image/x-icon">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phone-no_validation</title>
-  <link rel="stylesheet" href="validator.css" />
-</head>
+  </head>
 
-<body class="validator-ctn">
-  <div class="container-val">
-    <form action="">
-      <div class="header">
-        <h1 class="title">Phone Number validator</h1>
-      </div>
-      <div class="body">
-        <div class="phone-carrier">
-          <input type="tel" placeholder="+234|0 000 0000 000" class="number" />
-          <div class="logo-ctn">
-            <img src="/images/white.jpg" alt="carrier-logo" class="logo" />
+  <body class="validator-ctn">
+    <div class="container-val">
+      <form action="">
+        <div class="header">
+          <h1 class="title">Phone Number validator</h1>
+        </div>
+        <div class="body">
+          <div class="phone-carrier">
+            <input
+              type="tel"
+              placeholder="+234|0 000 0000 000"
+              class="number"
+            />
+            <div class="logo-ctn">
+              <img src="/images/white.jpg" alt="carrier-logo" class="logo" />
+            </div>
+          </div>
+          <div class="message-ctn">
+            <p class="message">Put in a number👆🏾</p>
+          </div>
+          <div class="check-btn-container">
+            <input type="button" value="check" class="check-btn" />
           </div>
         </div>
-        <div class="message-ctn">
-          <p class="message">Put in a number👆🏾</p>
-        </div>
-        <div class="check-btn-container">
-          <input type="button" value="check" class="check-btn" />
-        </div>
-      </div>
-      <p class="message">
-        Click <a href="/index.html">here</a> to go back home
-      </p>
-    </form>
-  </div>
-  <script src="validator.js" defer></script>
-</body>
-
+        <p class="message">
+          Click <a href="/src/home/index.html">here</a> to go back home
+        </p>
+      </form>
+    </div>
+    <script src="validator.js" defer></script>
+  </body>
 </html>
-<!-- onkeypress="return onlyNumberKeys(event)" -->
